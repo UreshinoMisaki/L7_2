@@ -1,0 +1,24 @@
+<h1>カート一覧</h1>
+
+<p>
+    <% subtotal = 0 %>
+    <% total = 0 %>
+    <% @cartitems.each do |e| %>
+        <% product = Product.find(e.product_id) %>
+        <%= product.pname %>
+        <%= product.price %> 円
+        <%= e.qty %> 個
+        <% subtotal = product.price.to_i * e.qty.to_i %>
+        <% total += subtotal %> 
+        <br>
+    <% end %>
+    <br>
+</p>
+
+<h4>合計金額</h4>
+<%= total %>円
+
+
+<br>
+
+<%= link_to '商品一覧ページへ', products_index_path %>

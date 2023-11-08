@@ -1,0 +1,15 @@
+<h1>商品新規追加</h1>
+<p>
+    <%= form_for @product, url: {action: :create} do |f| %>
+        <!-- %= f.label :product_id, 'id' % -->
+        <!-- %= f.text_field :product_id % -->
+        
+        <%= f.label :pname, '商品名' %>
+        <%= f.text_field :pname %>
+        
+        <%= f.label :price, '価格' %>
+        <%= f.text_field :price %>
+    
+        <%= f.submit '登録' %>
+    <% end %>
+</p>
