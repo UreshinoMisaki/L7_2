@@ -9,14 +9,15 @@ class ProductsController < ApplicationController
   end
   
   def create
+    puts "aaaaaa"
+    puts params
     @product = Product.new(
       pname: params[:product][:pname],
       price: params[:product][:price])
     if @product.save
-      puts 'save'
-      redirect_to products_index_path
+      redirect_to products_path
     else
-      render 'new'
+      render :new
     end
   end
   

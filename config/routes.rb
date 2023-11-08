@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
-  get 'carts/show'
-  get 'cart_items/new'
-  get 'top/main'
-  get 'products/index'
-  get 'products/new'
+  #get 'carts/show'
+  #get 'cart_items/new'
+  #get 'top/main'
+  #get 'products/index'
+  #get 'products/new'
   
-  post 'cart_items/new'
+  #post 'cart_items/new'
   
   resources :products
   resources :cart_items, only: [:new, :create, :destroy]

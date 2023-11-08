@@ -1,8 +1,6 @@
 <h1>商品新規追加</h1>
 <p>
-    <%= form_for @product, url: {action: :create} do |f| %>
-        <!-- %= f.label :product_id, 'id' % -->
-        <!-- %= f.text_field :product_id % -->
+    <%= form_with model: @product, local: true do |f| %>
         
         <%= f.label :pname, '商品名' %>
         <%= f.text_field :pname %>

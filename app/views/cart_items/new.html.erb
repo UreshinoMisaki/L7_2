@@ -3,7 +3,6 @@
     <% product = Product.find(params[:product_id]) %>
     <%= product.pname %>
     <%= product.price %>円
-    <%= @pid.id %>
     <%= form_for @cartitem, url: {action: :create} do |f| %>
         <%= f.hidden_field :product_id, value: @pid.id %>
         <%= f.label '数量' %>
